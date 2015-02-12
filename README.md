@@ -5,7 +5,7 @@ webpack regexp loader
 ## Installation
 
 ``` sh
-npm install --save-dev karma-webpack
+npm install --save-dev regexp-loader
 ```
 
 ## Usage
