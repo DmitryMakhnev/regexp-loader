@@ -27,13 +27,13 @@ module.exports = {
                 loader: "regexp",
                 rules: [
                     {
-                        'for': /\/\*@defaultTesting\.exports\*\/(.|\s)*\/\*@\/defaultTesting\.exports\*\//g,
-                        'do': ''
+                        'for': /foo/g,
+                        'do': 'bar'
                     },
                     {
-                        'for': '\/\/str',
+                        'for': 'foo',
                         'do': function () {
-                            return '"replaced";'
+                            return 'bar'
                         }
                     }
                 ]
