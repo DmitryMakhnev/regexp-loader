@@ -1,17 +1,7 @@
 module.exports = function(content) {
-
-    //find loader
-    var loaders = this.options.module.loaders;
-    var regexpLoader;
-    for (var i = loaders.length; i-- ;) {
-        if (loaders[i].loader === 'regexp') {
-            regexpLoader = loaders[i];
-            break;
-        }
-    }
-
-    //apply rules
-    var rules = regexpLoader.rules;
+    var currentLoader = this.options.module.loaders[this.loaderIndex];
+    var rules = currentLoader.rules;
+    var i;
     var iMax = rules.length;
     var rule;
     for (i = 0; i < iMax; i += 1) {
