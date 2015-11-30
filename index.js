@@ -8,6 +8,8 @@ module.exports = function(content) {
         rule = rules[i];
         content = content.replace(rule['for'], rule['do']);
     }
-
+    if(this.cacheable) {
+        this.cacheable();
+    }
     return content;
 };
